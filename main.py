@@ -8,13 +8,12 @@ from routes.pagamentos import pagamentos_bp
 from routes.planos import planos_bp
 from routes.interacoes import interacoes_bp
 
-
 app = Flask(__name__)
 CORS(app)
 
 # Configuração do banco MySQL
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:12345678@localhost/techdias'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:12345678@localhost/techdias"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db.init_app(app)
 
